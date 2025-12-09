@@ -1,0 +1,128 @@
+version: '3'
+
+vars:
+  PACKAGE_NAME: envguard
+
+tasks:
+  default:
+    desc: Show available tasks
+    cmds:
+      - task --list
+
+  install:
+    desc: Install dependencies
+    cmds:
+      - npm install
+
+  build:
+    desc: Build the package
+    cmds:
+      - npm run build
+
+  dev:
+    desc: Watch mode for development
+    cmds:
+      - npm run dev
+
+  test:
+    desc: Run tests
+    cmds:
+      - npm run test
+
+  test:watch:
+    desc: Run tests in watch mode
+    cmds:
+      - npm run test:watch
+
+  test:coverage:
+    desc: Run tests with coverage
+    cmds:
+      - npm run test:coverage
+
+  lint:
+    desc: Run ESLint
+    cmds:
+      - npm run lint
+
+  lint:fix:
+    desc: Run ESLint with auto-fix
+    cmds:
+      - npm run lint:fix
+
+  typecheck:
+    desc: Run TypeScript type checking
+    cmds:
+      - npm run typecheck
+
+  clean:
+    desc: Clean build artifacts
+    cmds:
+      - rm -rf dist
+      - rm -rf coverage
+      - rm -rf node_modules/.cache
+
+  check:
+    desc: Run all checks (lint, typecheck, test)
+    cmds:
+      - task: lint
+      - task: typecheck
+      - task: test
+
+  ci:
+    desc: Run CI pipeline (clean, install, check, build)
+    cmds:
+      - task: clean
+      - task: install
+      - task: check
+      - task: build
+
+  prepublish:
+    desc: Prepare for publishing (run all checks and build)
+    cmds:
+      - task: check
+      - task: build
+      - echo "Ready to publish! Run 'npm publish' to publish to npm."
+
+  publish:dry:
+    desc: Dry run of npm publish
+    cmds:
+      - npm publish --dry-run
+
+  version:patch:
+    desc: Bump patch version
+    cmds:
+      - npm version patch
+
+  version:minor:
+    desc: Bump minor version
+    cmds:
+      - npm version minor
+
+  version:major:
+    desc: Bump major version
+    cmds:
+      - npm version major
+
+  generate:example:
+    desc: Generate .env.example from schema
+    cmds:
+      - npm run generate-example
+
+  docs:
+    desc: Generate documentation (placeholder)
+    cmds:
+      - echo "Documentation generation not yet implemented"
+
+  setup:
+    desc: Initial project setup
+    cmds:
+      - task: install
+      - task: build
+      - echo "Setup complete! Run 'task test' to verify everything works."
+
+  release:
+    desc: Create a new release (run checks, build, and prepare for publish)
+    cmds:
+      - task: check
+      - task: build
+      - echo "Release prepared! Review changes and run 'npm publish' to publish."
