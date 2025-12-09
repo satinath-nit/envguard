@@ -2,7 +2,6 @@
 
 Type-safe environment variable validation for Node.js, Bun, and other JavaScript runtimes.
 
-[![CI](https://github.com/YOUR_USERNAME/envguard/workflows/CI/badge.svg)](https://github.com/YOUR_USERNAME/envguard/actions)
 [![npm version](https://badge.fury.io/js/envguard.svg)](https://www.npmjs.com/package/envguard)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 
