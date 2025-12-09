@@ -1,6 +1,6 @@
 {
-  "name": "envguard",
-  "version": "0.1.0",
+  "name": "@opensourceforge/envguard",
+  "version": "1.1.0",
   "description": "Type-safe environment variable validation with superior TypeScript inference, zero dependencies, and advanced features like secret masking, nested objects, and .env.example generation",
   "main": "dist/index.js",
   "module": "dist/index.mjs",
@@ -50,16 +50,16 @@
     "bun",
     "deno"
   ],
-  "author": "",
+  "author": "Satinath Mondal <satinathra@gmail.com>",
   "license": "MIT",
   "repository": {
     "type": "git",
-    "url": ""
+    "url": "https://github.com/satinath-nit/envguard.git"
   },
   "bugs": {
-    "url": ""
+    "url": "https://github.com/satinath-nit/envguard/issues"
   },
-  "homepage": "",
+  "homepage": "https://github.com/satinath-nit/envguard#readme",
   "engines": {
     "node": ">=18.0.0"
   },

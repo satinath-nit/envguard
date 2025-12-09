@@ -510,26 +510,6 @@ const env = cleanEnv(
 );
 ```
 
-## Comparison with envalid
-
-EnvGuard improves on envalid in several ways:
-
-| Feature | EnvGuard | envalid |
-|---------|----------|---------|
-| Zero dependencies | Yes | No (tslib) |
-| `testDefault` | Yes | No |
-| `warnOnly` mode | Yes | No |
-| Extra variable detection | Yes | No |
-| Secret masking | Yes | No |
-| Duration validator | Yes | No |
-| Bytes validator | Yes | No |
-| UUID validator | Yes | No |
-| .env.example generation | Yes | No |
-| Enumerable proxy properties | Yes | No |
-| Conditional requirements | Yes | Yes |
-| Custom validators | Yes | Yes |
-| TypeScript inference | Yes | Yes |
-
 ## API Reference
 
 ### `cleanEnv(spec, options?)`
